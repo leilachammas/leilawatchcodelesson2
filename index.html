@@ -13,3 +13,93 @@ make SandwichWith _ham_
 makeSandwichWith(ham)
 
 console.log('My Todos', todos)
+
+function sayHiTo(person) {
+    console.log('hi', person);
+}
+undefined
+sayHiTo('leila') // hi leila
+VM609:2 hi leila
+undefined
+sayHiTo('leila') // person = 'leila'
+VM609:2 hi leila
+undefined
+function sayHiTo(person) {
+    console.log('hi', person);
+}
+undefined
+
+____________________
+
+var todos = ['item 1', 'item 2', 'item 3']
+undefined
+function functionName() {}
+
+undefined
+function displayTodos() {
+console.log('My todos:', todos);
+}
+undefined
+displayTodos()
+VM646:2 My todos: (3) ["item 1", "item 2", "item 3"]
+undefined
+
+___________________
+
+function addTodo() {
+    todos.push('new todo');
+}
+
+function changeTodo(position, newValue) {
+    todos[position] = newValue;
+}
+undefined
+displayTodos()
+VM646:2 My todos: (8) ["item 1", "item 2", "item 3", "new todo", "new todo", "new todo", "todo", "todo"]
+undefined
+changeTodo(0, 'changed')
+undefined
+displayTodos()
+VM646:2 My todos: (8) ["changed", "item 2", "item 3", "new todo", "new todo", "new todo", "todo", "todo"]
+undefined
+function changeTodo(position, newValue) {
+    todos[position] = newValue;
+displayTodos();
+}
+undefined
+displayTodos()
+VM646:2 My todos: (8) ["changed", "item 2", "item 3", "new todo", "new todo", "new todo", "todo", "todo"]
+undefined
+changeTodo(0, 'changed again')
+VM646:2 My todos: (8) ["changed again", "item 2", "item 3", "new todo", "new todo", "new todo", "todo", "todo"]
+undefined
+displayTodos()
+VM646:2 My todos: (8) ["changed again", "item 2", "item 3", "new todo", "new todo", "new todo", "todo", "todo"]
+undefined
+
+___________________ 
+
+function deleteTodo() {
+    todos.splice(position, 1);
+    displayTodos();
+}
+undefined
+deleteTodo()
+VM866:2 Uncaught ReferenceError: position is not defined
+    at deleteTodo (<anonymous>:2:18)
+    at <anonymous>:1:1
+deleteTodo @ VM866:2
+(anonymous) @ VM870:1
+deleteTodo(0)
+VM866:2 Uncaught ReferenceError: position is not defined
+    at deleteTodo (<anonymous>:2:18)
+    at <anonymous>:1:1
+deleteTodo @ VM866:2
+(anonymous) @ VM871:1
+displayTodos()
+VM646:2 My todos: (8) ["changed again", "item 2", "item 3", "new todo", "new todo", "new todo", "todo", "todo"]
+undefined
+deleteTodo(0)
+VM866:2 Uncaught ReferenceError: position is not defined
+    at deleteTodo (<anonymous>:2:18)
+    at <anonymous>:1:1
